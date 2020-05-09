@@ -14,6 +14,10 @@ def create_table():
     c.execute("CREATE TABLE IF NOT EXISTS parent_reply (parent_id TEXT PRIMARY KEY, comment_id TEXT UNIQUE, parent TEXT, subreddit TEXT, unix INT, score INT)")
 
 
+def format_data():
+    data = data.replace("\n", " newlinechar ")
+
+
 if__name__ == "__main__":
     create_table()
     row_counter = 0
@@ -25,4 +29,5 @@ if__name__ == "__main__":
             parent_id = row['parent_id']
             body = format_data(row['body'])
             created_utc = row['created_utc']
-            score =
+            score = row['score']
+            subreddit = row['subreddit']
