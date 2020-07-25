@@ -3,7 +3,7 @@ import json
 from datetime import datetime
 
 
-timeframe = '2005-2'
+timeframe = '2005-20'
 sql_transaction = []
 
 connection = sqlite3.connect('{}.db'.format(timeframe))
